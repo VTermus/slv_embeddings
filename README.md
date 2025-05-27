@@ -3,7 +3,7 @@
 This repository contains code for building the  corpus and embedding of literary Slovenian based on two architectures:
 
 - CBOW (word2vec) 
-- SVD (tf-idf) 
+- TF-IDF + SVD 
 
 ## Text sources
 Embeddings are trained on literary texts from:
@@ -21,9 +21,9 @@ Embeddings are trained on literary texts from:
 
 ### Annotated corpora
 
-``get_text_from_eltec.py``, ``get_text_from_imp.py`` → get .txt files with plain texts extracted out of TEI formats (for corpora without available .txt version)
-``get_titles_from_eltec_imp.py``, ``get_titles_from_imp.py``, ``get_titles_from_kdsp_maj68.py`` → extract title and author from annotated files and rename texts (for corpora with unclear filenames)
-``get_lemmas_pos_eltec.py``, ``get_lemmas_pos_imp.py``, ``get_lemmas_pos_prilit.py``, ``get_lemmas_pos_kdsp_maj68.py`` → extract lemmas and POS tags for each token of the text specific to each corpus format to .tsv files
+``get_text_from_*.py`` → get .txt files with plain texts extracted out of TEI formats (for corpora without available .txt version)
+``get_titles_from_*.py`` → extract title and author from annotated files and rename texts (for corpora with unclear filenames)
+``get_lemmas_pos_*.py`` → extract lemmas and POS tags for each token of the text specific to each corpus format to .tsv files
 ``lemmas_preprocessing.py`` → process all files and get .txt with clean lemmas of specific POS according to our rules for each file
 
 ### DLib corpus
